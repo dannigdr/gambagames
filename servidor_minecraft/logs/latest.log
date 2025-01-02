@@ -1,6 +1,6 @@
-[11:35:17] [main/INFO]: Loading Minecraft 1.20.1 with Fabric Loader 0.16.3
-[11:35:17] [ForkJoinPool-1-worker-1/WARN]: Mod waterframes uses the version 2.1.7b which isn't compatible with Loader's extended semantic version format (Could not parse version number component '7b'!), SemVer is recommended for reliably evaluating dependencies and prioritizing newer version
-[11:35:17] [main/INFO]: Loading 65 mods:
+[13:48:07] [main/INFO]: Loading Minecraft 1.20.1 with Fabric Loader 0.16.3
+[13:48:07] [ForkJoinPool-1-worker-3/WARN]: Mod waterframes uses the version 2.1.7b which isn't compatible with Loader's extended semantic version format (Could not parse version number component '7b'!), SemVer is recommended for reliably evaluating dependencies and prioritizing newer version
+[13:48:07] [main/INFO]: Loading 67 mods:
 	- cloth-config 11.1.136
 	   \-- cloth-basic-math 0.6.1
 	- creativecore 2.12.24
@@ -66,6 +66,8 @@
 	- java 17
 	- minecraft 1.20.1
 	- pointblank 1.9.6
+	- skinrestorer 2.2.1+1.20-fabric
+	   \-- org_mineskin_java-client 3.0.1-SNAPSHOT
 	- tacz 1.0.2-hotfix2
 	   |-- cardinal-components-base 5.2.2
 	   |-- cardinal-components-entity 5.2.2
@@ -83,92 +85,94 @@
 	   \-- fabric-key-binding-api-v1 1.0.36+fb8d95da82
 	- waterframes 2.1.7b
 	- watermedia 2.1.10
-[11:35:17] [main/WARN]: Found 2 non-fabric mods:
+[13:48:07] [main/WARN]: Found 2 non-fabric mods:
 	- corpse-forge-1.20.1-1.0.17.jar
 	- tacz-1.20.1-1.0.3-all.jar
-[11:35:17] [main/INFO]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=file:/workspaces/gambagames/servidor_minecraft/libraries/net/fabricmc/sponge-mixin/0.15.2+mixin.0.8.7/sponge-mixin-0.15.2+mixin.0.8.7.jar Service=Knot/Fabric Env=SERVER
-[11:35:17] [main/INFO]: Compatibility level set to JAVA_17
-[11:35:18] [main/WARN]: Error loading class: net/minecraft/class_276 (java.lang.ClassNotFoundException: net/minecraft/class_276)
-[11:35:18] [main/WARN]: @Mixin target net.minecraft.class_276 was not found pointblank.fabric.mixins.json:RenderTargetMixin from mod pointblank
-[11:35:18] [main/WARN]: Error loading class: net/minecraft/class_7766 (java.lang.ClassNotFoundException: net/minecraft/class_7766)
-[11:35:18] [main/WARN]: @Mixin target net.minecraft.class_7766 was not found pointblank.fabric.mixins.json:SpriteLoaderMixin from mod pointblank
-[11:35:18] [main/WARN]: Error loading class: net/minecraft/class_635 (java.lang.ClassNotFoundException: net/minecraft/class_635)
-[11:35:18] [main/WARN]: @Mixin target net.minecraft.class_635 was not found tacz.mixins.json:client.network.ClientLoginNetworkHandlerAccessor from mod tacz
-[11:35:18] [main/INFO]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.4.1).
-[11:35:19] [main/WARN]: @Inject(@At("INVOKE")) Shift.BY=2 on porting_lib_entity.mixins.json:common.LivingEntityMixin from mod porting_lib_entity::handler$zjc000$porting_lib_entity$port_lib$onFinishUsing exceeds the maximum allowed value: 0. Increase the value of maxShiftBy to suppress this warning.
-[11:35:25] [main/INFO]: Loading mod pointblank
-[11:35:25] [main/INFO]: [STDERR]: java.nio.file.NoSuchFileException: ./pointblank
-[11:35:25] [main/INFO]: [STDERR]: 	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
-[11:35:25] [main/INFO]: [STDERR]: 	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106)
-[11:35:25] [main/INFO]: [STDERR]: 	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
-[11:35:25] [main/INFO]: [STDERR]: 	at java.base/sun.nio.fs.UnixFileSystemProvider.newDirectoryStream(UnixFileSystemProvider.java:440)
-[11:35:25] [main/INFO]: [STDERR]: 	at java.base/java.nio.file.Files.newDirectoryStream(Files.java:482)
-[11:35:25] [main/INFO]: [STDERR]: 	at com.vicmatskiv.pointblank.registry.ExtensionRegistry.scanExtensions(ExtensionRegistry.java:415)
-[11:35:25] [main/INFO]: [STDERR]: 	at com.vicmatskiv.pointblank.registry.ExtensionRegistry.discoverExtensions(ExtensionRegistry.java:239)
-[11:35:25] [main/INFO]: [STDERR]: 	at com.vicmatskiv.pointblank.PointBlankInitializer.init(PointBlankInitializer.java:30)
-[11:35:25] [main/INFO]: [STDERR]: 	at com.vicmatskiv.pointblank.PointBlankMod.onInitialize(PointBlankMod.java:9)
-[11:35:25] [main/INFO]: [STDERR]: 	at net.fabricmc.loader.impl.FabricLoaderImpl.invokeEntrypoints(FabricLoaderImpl.java:399)
-[11:35:25] [main/INFO]: [STDERR]: 	at net.fabricmc.loader.impl.game.minecraft.Hooks.startServer(Hooks.java:63)
-[11:35:25] [main/INFO]: [STDERR]: 	at net.minecraft.server.Main.main(Main.java:112)
-[11:35:25] [main/INFO]: [STDERR]: 	at net.fabricmc.loader.impl.game.minecraft.MinecraftGameProvider.launch(MinecraftGameProvider.java:480)
-[11:35:25] [main/INFO]: [STDERR]: 	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:74)
-[11:35:25] [main/INFO]: [STDERR]: 	at net.fabricmc.loader.impl.launch.knot.KnotServer.main(KnotServer.java:23)
-[11:35:25] [main/INFO]: [STDERR]: 	at net.fabricmc.loader.impl.launch.server.FabricServerLauncher.main(FabricServerLauncher.java:69)
-[11:35:25] [main/INFO]: [STDERR]: 	at net.fabricmc.installer.ServerLauncher.main(ServerLauncher.java:69)
-[11:35:25] [main/ERROR]: No data fixer registered for grenade40mm
-[11:35:25] [main/ERROR]: No data fixer registered for grenade20mm
-[11:35:25] [main/ERROR]: No data fixer registered for smaw_rocket
-[11:35:25] [main/ERROR]: No data fixer registered for at4_rocket
-[11:35:25] [main/ERROR]: No data fixer registered for javelin_rocket
-[11:35:25] [main/ERROR]: No data fixer registered for grenade
-[11:35:26] [main/ERROR]: No data fixer registered for target_minecart
-[11:35:26] [main/INFO]: Registered synced data key tacz:shoot_cool_down for minecraft:living_entity
-[11:35:26] [main/INFO]: Registered synced data key tacz:melee_cool_down for minecraft:living_entity
-[11:35:26] [main/INFO]: Registered synced data key tacz:reload_state for minecraft:living_entity
-[11:35:26] [main/INFO]: Registered synced data key tacz:aiming_progress for minecraft:living_entity
-[11:35:26] [main/INFO]: Registered synced data key tacz:draw_cool_down for minecraft:living_entity
-[11:35:26] [main/INFO]: Registered synced data key tacz:is_aiming for minecraft:living_entity
-[11:35:26] [main/INFO]: Registered synced data key tacz:sprint_time for minecraft:living_entity
-[11:35:26] [main/INFO]: Registered synced data key tacz:bolt_cool_down for minecraft:living_entity
-[11:35:26] [main/INFO]: [voicechat] Compatibility version 18
-[11:35:26] [main/INFO]: [voicechat] Loading plugins
-[11:35:26] [main/INFO]: [voicechat] Loaded 0 plugin(s)
-[11:35:26] [main/INFO]: [voicechat] Initializing plugins
-[11:35:26] [main/INFO]: [voicechat] Initialized 0 plugin(s)
-[11:35:27] [main/INFO]: Running WATERFrAMES v2.1.7b
-[11:35:27] [main/WARN]: Stub running successfully
-[11:35:27] [main/INFO]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
-[11:35:29] [main/INFO]: Loaded 8 recipes
-[11:35:29] [main/INFO]: Loaded 1272 advancements
-[11:35:30] [main/INFO]: Applied 0 biome modifications to 0 of 64 new biomes in 1.682 ms
-[11:35:30] [Server thread/INFO]: Starting minecraft server version 1.20.1
-[11:35:30] [Server thread/INFO]: Loading properties
-[11:35:30] [Server thread/INFO]: Default game type: SURVIVAL
-[11:35:30] [Server thread/INFO]: Generating keypair
-[11:35:30] [Server thread/INFO]: Starting Minecraft server on *:25565
-[11:35:30] [Server thread/INFO]: Using epoll channel type
-[11:35:30] [Server thread/WARN]: **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
-[11:35:30] [Server thread/WARN]: The server will make no attempt to authenticate usernames. Beware.
-[11:35:30] [Server thread/WARN]: While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
-[11:35:30] [Server thread/WARN]: To change this, set "online-mode" to "true" in the server.properties file.
-[11:35:30] [Server thread/INFO]: Preparing level "world"
-[11:35:33] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
-[11:35:37] [Worker-Main-3/INFO]: Preparing spawn area: 0%
-[11:35:37] [Worker-Main-3/INFO]: Preparing spawn area: 0%
-[11:35:37] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[11:35:37] [Worker-Main-3/INFO]: Preparing spawn area: 0%
-[11:35:37] [Worker-Main-3/INFO]: Preparing spawn area: 0%
-[11:35:37] [Worker-Main-3/INFO]: Preparing spawn area: 0%
-[11:35:37] [Worker-Main-2/INFO]: Preparing spawn area: 0%
-[11:35:38] [Worker-Main-2/INFO]: Preparing spawn area: 0%
-[11:35:38] [Worker-Main-3/INFO]: Preparing spawn area: 0%
-[11:35:38] [Worker-Main-3/INFO]: Preparing spawn area: 0%
-[11:35:38] [Worker-Main-1/INFO]: Preparing spawn area: 18%
-[11:35:39] [Server thread/INFO]: Time elapsed: 5457 ms
-[11:35:39] [Server thread/INFO]: Done (8.374s)! For help, type "help"
-[11:35:39] [Server thread/WARN]: [voicechat] Running in offline mode - Voice chat encryption is not secure!
-[11:35:39] [VoiceChatServerThread/INFO]: [voicechat] Voice chat server started at port 24454
-[11:37:22] [Server thread/INFO]: danni_gdr08[/[0:0:0:0:0:0:0:1%0]:55428] logged in with entity id 202 at (34.5, 63.0, 31.5)
-[11:37:22] [Server thread/INFO]: danni_gdr08 joined the game
-[11:38:11] [Server thread/INFO]: Made danni_gdr08 a server operator
-[11:38:16] [Server thread/INFO]: [danni_gdr08: Set own game mode to Creative Mode]
+[13:48:07] [main/INFO]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=file:/workspaces/gambagames/servidor_minecraft/libraries/net/fabricmc/sponge-mixin/0.15.2+mixin.0.8.7/sponge-mixin-0.15.2+mixin.0.8.7.jar Service=Knot/Fabric Env=SERVER
+[13:48:07] [main/INFO]: Compatibility level set to JAVA_17
+[13:48:08] [main/WARN]: Error loading class: net/minecraft/class_276 (java.lang.ClassNotFoundException: net/minecraft/class_276)
+[13:48:08] [main/WARN]: @Mixin target net.minecraft.class_276 was not found pointblank.fabric.mixins.json:RenderTargetMixin from mod pointblank
+[13:48:08] [main/WARN]: Error loading class: net/minecraft/class_7766 (java.lang.ClassNotFoundException: net/minecraft/class_7766)
+[13:48:08] [main/WARN]: @Mixin target net.minecraft.class_7766 was not found pointblank.fabric.mixins.json:SpriteLoaderMixin from mod pointblank
+[13:48:08] [main/WARN]: Error loading class: net/minecraft/class_635 (java.lang.ClassNotFoundException: net/minecraft/class_635)
+[13:48:08] [main/WARN]: @Mixin target net.minecraft.class_635 was not found tacz.mixins.json:client.network.ClientLoginNetworkHandlerAccessor from mod tacz
+[13:48:08] [main/INFO]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.4.1).
+[13:48:09] [main/WARN]: @Inject(@At("INVOKE")) Shift.BY=2 on porting_lib_entity.mixins.json:common.LivingEntityMixin from mod porting_lib_entity::handler$zjc000$porting_lib_entity$port_lib$onFinishUsing exceeds the maximum allowed value: 0. Increase the value of maxShiftBy to suppress this warning.
+[13:48:14] [main/INFO]: Loading mod pointblank
+[13:48:14] [main/INFO]: [STDERR]: java.nio.file.NoSuchFileException: ./pointblank
+[13:48:14] [main/INFO]: [STDERR]: 	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+[13:48:14] [main/INFO]: [STDERR]: 	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106)
+[13:48:14] [main/INFO]: [STDERR]: 	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+[13:48:14] [main/INFO]: [STDERR]: 	at java.base/sun.nio.fs.UnixFileSystemProvider.newDirectoryStream(UnixFileSystemProvider.java:440)
+[13:48:14] [main/INFO]: [STDERR]: 	at java.base/java.nio.file.Files.newDirectoryStream(Files.java:482)
+[13:48:14] [main/INFO]: [STDERR]: 	at com.vicmatskiv.pointblank.registry.ExtensionRegistry.scanExtensions(ExtensionRegistry.java:415)
+[13:48:14] [main/INFO]: [STDERR]: 	at com.vicmatskiv.pointblank.registry.ExtensionRegistry.discoverExtensions(ExtensionRegistry.java:239)
+[13:48:14] [main/INFO]: [STDERR]: 	at com.vicmatskiv.pointblank.PointBlankInitializer.init(PointBlankInitializer.java:30)
+[13:48:14] [main/INFO]: [STDERR]: 	at com.vicmatskiv.pointblank.PointBlankMod.onInitialize(PointBlankMod.java:9)
+[13:48:14] [main/INFO]: [STDERR]: 	at net.fabricmc.loader.impl.FabricLoaderImpl.invokeEntrypoints(FabricLoaderImpl.java:399)
+[13:48:14] [main/INFO]: [STDERR]: 	at net.fabricmc.loader.impl.game.minecraft.Hooks.startServer(Hooks.java:63)
+[13:48:14] [main/INFO]: [STDERR]: 	at net.minecraft.server.Main.main(Main.java:112)
+[13:48:14] [main/INFO]: [STDERR]: 	at net.fabricmc.loader.impl.game.minecraft.MinecraftGameProvider.launch(MinecraftGameProvider.java:480)
+[13:48:14] [main/INFO]: [STDERR]: 	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:74)
+[13:48:14] [main/INFO]: [STDERR]: 	at net.fabricmc.loader.impl.launch.knot.KnotServer.main(KnotServer.java:23)
+[13:48:14] [main/INFO]: [STDERR]: 	at net.fabricmc.loader.impl.launch.server.FabricServerLauncher.main(FabricServerLauncher.java:69)
+[13:48:14] [main/INFO]: [STDERR]: 	at net.fabricmc.installer.ServerLauncher.main(ServerLauncher.java:69)
+[13:48:15] [main/ERROR]: No data fixer registered for grenade40mm
+[13:48:15] [main/ERROR]: No data fixer registered for grenade20mm
+[13:48:15] [main/ERROR]: No data fixer registered for smaw_rocket
+[13:48:15] [main/ERROR]: No data fixer registered for at4_rocket
+[13:48:15] [main/ERROR]: No data fixer registered for javelin_rocket
+[13:48:15] [main/ERROR]: No data fixer registered for grenade
+[13:48:15] [main/ERROR]: No data fixer registered for target_minecart
+[13:48:15] [main/INFO]: Registered synced data key tacz:shoot_cool_down for minecraft:living_entity
+[13:48:15] [main/INFO]: Registered synced data key tacz:melee_cool_down for minecraft:living_entity
+[13:48:15] [main/INFO]: Registered synced data key tacz:reload_state for minecraft:living_entity
+[13:48:15] [main/INFO]: Registered synced data key tacz:aiming_progress for minecraft:living_entity
+[13:48:15] [main/INFO]: Registered synced data key tacz:draw_cool_down for minecraft:living_entity
+[13:48:15] [main/INFO]: Registered synced data key tacz:is_aiming for minecraft:living_entity
+[13:48:15] [main/INFO]: Registered synced data key tacz:sprint_time for minecraft:living_entity
+[13:48:15] [main/INFO]: Registered synced data key tacz:bolt_cool_down for minecraft:living_entity
+[13:48:16] [main/INFO]: [voicechat] Compatibility version 18
+[13:48:16] [main/INFO]: [voicechat] Loading plugins
+[13:48:16] [main/INFO]: [voicechat] Loaded 0 plugin(s)
+[13:48:16] [main/INFO]: [voicechat] Initializing plugins
+[13:48:16] [main/INFO]: [voicechat] Initialized 0 plugin(s)
+[13:48:16] [main/INFO]: Running WATERFrAMES v2.1.7b
+[13:48:16] [main/WARN]: Stub running successfully
+[13:48:17] [main/INFO]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[13:48:18] [main/INFO]: Loaded 8 recipes
+[13:48:18] [main/INFO]: Loaded 1272 advancements
+[13:48:19] [main/INFO]: Applied 0 biome modifications to 0 of 64 new biomes in 1.680 ms
+[13:48:19] [Server thread/INFO]: Starting minecraft server version 1.20.1
+[13:48:19] [Server thread/INFO]: Loading properties
+[13:48:19] [Server thread/INFO]: Default game type: SURVIVAL
+[13:48:19] [Server thread/INFO]: Generating keypair
+[13:48:19] [Server thread/INFO]: Starting Minecraft server on *:25565
+[13:48:19] [Server thread/INFO]: Using epoll channel type
+[13:48:19] [Server thread/WARN]: **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
+[13:48:19] [Server thread/WARN]: The server will make no attempt to authenticate usernames. Beware.
+[13:48:19] [Server thread/WARN]: While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
+[13:48:19] [Server thread/WARN]: To change this, set "online-mode" to "true" in the server.properties file.
+[13:48:19] [Server thread/INFO]: Preparing level "world"
+[13:48:23] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
+[13:48:26] [Worker-Main-1/INFO]: Preparing spawn area: 0%
+[13:48:26] [Worker-Main-3/INFO]: Preparing spawn area: 0%
+[13:48:26] [Worker-Main-3/INFO]: Preparing spawn area: 0%
+[13:48:26] [Worker-Main-3/INFO]: Preparing spawn area: 0%
+[13:48:26] [Worker-Main-1/INFO]: Preparing spawn area: 0%
+[13:48:26] [Worker-Main-1/INFO]: Preparing spawn area: 0%
+[13:48:26] [Worker-Main-1/INFO]: Preparing spawn area: 0%
+[13:48:26] [Worker-Main-3/INFO]: Preparing spawn area: 0%
+[13:48:27] [Worker-Main-3/INFO]: Preparing spawn area: 0%
+[13:48:27] [Worker-Main-1/INFO]: Preparing spawn area: 0%
+[13:48:28] [Worker-Main-2/INFO]: Preparing spawn area: 0%
+[13:48:28] [Worker-Main-3/INFO]: Preparing spawn area: 32%
+[13:48:29] [Worker-Main-1/INFO]: Preparing spawn area: 83%
+[13:48:29] [Server thread/INFO]: Time elapsed: 6107 ms
+[13:48:29] [Server thread/INFO]: Done (9.385s)! For help, type "help"
+[13:48:29] [Server thread/WARN]: [voicechat] Running in offline mode - Voice chat encryption is not secure!
+[13:48:29] [VoiceChatServerThread/INFO]: [voicechat] Voice chat server started at port 24454
+[13:49:32] [Server thread/INFO]: danni_gdr08[/[0:0:0:0:0:0:0:1%0]:45876] logged in with entity id 216 at (39.86149049676701, 60.0, -59.41898510130747)
+[13:49:32] [Server thread/INFO]: danni_gdr08 joined the game
+[13:49:34] [Server thread/INFO]: [voicechat] Received secret request of danni_gdr08 (18)
+[13:49:34] [Server thread/INFO]: [voicechat] Sent secret to danni_gdr08
